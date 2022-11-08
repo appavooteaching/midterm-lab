@@ -16,10 +16,13 @@ A:
         jl B
         add QWORD PTR [POS_SUM], rcx
         jmp C
-B:      add QWORD PTR [NEG_SUM], rcx
-C:      add rax, rcx,
+B:
+	add QWORD PTR [NEG_SUM], rcx
+C:
+	add rax, rcx
         inc rdi
         cmp rax, 0
         je D
         jmp A
-D:      int3
+D:
+	int3

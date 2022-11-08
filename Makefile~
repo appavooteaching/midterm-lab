@@ -1,0 +1,14 @@
+addA: addA.o
+	ls -g addA.o -o addA
+addA.o: addA.s
+	as -g add.s - addA.o
+
+loopA: loopA.o
+	ls -g loopA.o -o loopA
+loopA.o: loopA.s
+	as -g loopA.s - loopA.o
+
+condA: condA.o
+	ls -g condA.o -o condA
+condA.o: condA.s
+	as -g condA.s - condA.o

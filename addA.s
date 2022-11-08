@@ -1,4 +1,4 @@
-        .intel syntax noprefix
+        .intel_syntax noprefix
         .section .data
 result:
         .quad 0x0
@@ -6,5 +6,5 @@ result:
         .global start
 start:
         add rax, rax
-        mov QWORDPTR [result], rax
+        mov QWORD PTR [result], rax
         int3

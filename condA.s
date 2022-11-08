@@ -1,4 +1,4 @@
-        .intel syntax noprefix
+        .intel_syntax noprefix
         .section .data
 data0 : .quad 0xdead
 data1 : .quad 0xbeef
@@ -14,19 +14,23 @@ _start:
         cmp rax, rbx
         jne A
         inc rcx
-A:      mov rbx, QWORD PTR [data1]
+A:
+	mov rbx, QWORD PTR [data1]
         and rbx, 0xf
         cmp rax, rbx
         jne B
         inc rcx
-B:      mov rbx, QWORD PTR [data1]
+B:
+	mov rbx, QWORD PTR [data1]
         and rbx, 0xf
         cmp rax, rbx
         jne C
         inc rcx
-C:      mov rbx, QWORD PTR [data1]
+C:
+	mov rbx, QWORD PTR [data1]
         and rbx, 0xf
         cmp rax, rbx
         jne D
         inc rcx
-D:      int3
+D:
+	int3
