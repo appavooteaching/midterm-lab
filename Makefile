@@ -14,6 +14,6 @@ condA.o: condA.s
 	as -g condA.s -o condA.o
 
 pgmv1: pgmv1.o
-        ls -g pgmv1.o -o pgmv1
+	ls -g pgmv1.o -o pgmv1
 pgmv1.o: pgmv1.s
 	as -g pgmv1.s -o pgmv1.o
